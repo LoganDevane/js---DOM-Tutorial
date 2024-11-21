@@ -1,10 +1,8 @@
-var books = documents.querySelectorAll('book-list li.name')
+const banner = document.querySelector('#page-banner');
 
-Array.from(books).forEach(function(book){
-     book.textContext += '(booktitle)' ;
+console.log('#page-banner node type is:', banner.nodeType);
+console.log('#page-banner node name is:', banner.nodeName);
+console.log('#page-banner has child nodes:', banner.hasChildNodes());
 
-});
-
-const booklist = document.querySelector ('#Book-list')
-//bookList.innerHTML = '<h2> Books and more books... </h2>
-booklist.innerHTML += '<p>This is how you add HTML </p>'
+const clonedBanner = banner.cloneNode(true);
+console.log(clonedBanner);
